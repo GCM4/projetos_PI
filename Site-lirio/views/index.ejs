@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lírio - Transformando ideias em soluções</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="nav-logo">
+                <img src="/images/logo-lirio-white.png" alt="Lírio Logo">
+                <span class="logo-text">Lírio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contate-nos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container hero-content">
+            <h1>Transformando ideias em soluções que impulsionam o futuro.</h1>
+            <p class="hero-section-text">Trabalhamos no desenvolvimento de softwares que unem inovação, escalabilidade e performance, entregando soluções que impulsionam resultados reais.</p>
+            <a href="#contato" class="btn-primary">Conheça mais</a>
+        </div>
+    </header>
+
+    <section id="sobre" class="about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2 class="about-title">Quem somos nós</h2>
+                <p class="about">Desenvolvemos soluções em software com foco em inovação, desempenho e excelência tecnológica.
+                 Nossa empresa atua na criação de sistemas e plataformas digitais personalizados, oferecendo recursos modernos e eficientes para atender às demandas do mercado atual.</p>
+                <p class="about">Combinamos tecnologia, estratégia e desenvolvimento de alta qualidade para entregar projetos seguros, escaláveis e alinhados aos objetivos de cada cliente. 
+                Nosso compromisso é criar soluções inteligentes que contribuam para o crescimento, a produtividade e a transformação digital de empresas e negócios.</p>
+            </div>
+            <div class="about-logo">
+                <img src="/images/logo-lirio-white.png" alt="Lírio Logo">
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="product-section">
+        <div class="container product-grid">
+            <div class="product-text">
+                <h2 class="conheca">Conheça o <br><span class="highlight">TUGARIN</span></h2>
+                <p>Aplicativo para monitoramento de tartarugas marinhas com a utilização de visão computacional.</p>
+                <a href="#" class="btn-primary">Saiba mais</a>
+            </div>
+            <div class="product-mockup">
+                <img src="/images/tugarin-mockup.jpeg" alt="Tugarin App Mockup">
+            </div>
+        </div>
+    </section>
+
+<section id="equipe" class="team-section">
+        <div class="container">
+            <h2 class="conheca">Conheça nosso time</h2>
+            <div class="team-grid">
+                <% time.forEach(membro => { %>
+                    <div class="team-card">
+                        <img src="<%= membro.foto %>" alt="<%= membro.nome %>" class="team-avatar">
+                        
+                        <div class="team-info">
+                            <h3 class="nome"><%= membro.nome %></h3>
+                            <p class="cargo"><%= membro.cargo %></p>
+                            
+                            <div class="social-icons">
+                                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2>Dúvidas? Entre em contato.</h2>
+                <p class="info">Nossa equipe está pronta para ajudar você com informações, suporte e qualquer esclarecimento necessário. Responderemos o mais rápido possível.</p>
+            </div>
+            <form action="/contato" method="POST" class="contact-form">
+                <input type="text" name="nome" placeholder="Digite seu nome" required>
+                <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                <textarea name="mensagem" placeholder="Digite sua mensagem" rows="6" required></textarea>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+ <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="/images/logo-lirio-white.png" alt="Lírio Logo"> <span class="logo-text">Lírio</span>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lírio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

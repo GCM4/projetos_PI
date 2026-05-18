@@ -1,0 +1,493 @@
+@font-face {
+    font-family: 'Headland One Baixada';
+    src: url('../fonts/HeadlandOne-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SemiBold';
+    src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Potta One Baixada';
+    src: url('../fonts/PottaOne-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+   /*CONFIGURAÇÕES GERAIS E RESETS */
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Regular", sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a { 
+    text-decoration: none; 
+}
+
+
+
+
+.product-text .highlight {
+    font-family: 'Potta One Baixada', cursive !important;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    background: linear-gradient(135deg, #15BFAE 0%, #0381AF 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    display: inline-block;
+}
+
+.title, 
+.btn-primary, 
+.about,
+.conheca, 
+.team-card h3,    
+.contact-info h2 { 
+    font-family: 'Bold', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+.nav-menu a, 
+.hero-section h1, 
+.about-section h2, 
+.product-text h2,
+.hero-section-text, 
+.info,
+.team-card p {
+    font-family: 'SemiBold', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.contact-form,
+.contact-form input,
+.contact-form textarea,
+.contact-form p {
+    font-family: 'Regular', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.logo-text {
+    font-family: 'Headland One Baixada', serif !important;
+    font-size: 1.5rem;
+    font-weight: 400 !important;
+    color: #ffffff;
+}
+
+/*  4. COMPONENTES E BOTÕES */
+.btn-primary {
+    display: inline-block;
+    background-color: #2777BF;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+.btn-primary:hover { 
+    background-color: #1f5ca0; 
+}
+
+
+   /* NAVBAR */
+  
+.navbar {
+    background-color: #000000;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #111;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-logo img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-menu li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li:not(:last-child)::after {
+    content: "|";
+    color: #ffffff;
+    margin-left: 15px;
+    opacity: 0.7;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #2777BF;
+}
+
+
+   /* HERO SECTION */
+
+.hero-section {
+    width: 100%;
+    min-height: 75vh; 
+    background: linear-gradient(#ffffffcc, #ffffffcc), url('../images/equipe-trabalhando.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.hero-content { 
+    width: 100%;
+    max-width: 1200px; 
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    color: #2777BF;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: left;
+    max-width: 650px; 
+}
+
+.hero-section h1 span { 
+    color: #2777BF; 
+}
+
+.hero-section p {
+    font-size: 1.15rem;
+    color: #323232;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 550px; 
+}
+
+
+ /* ABOUT SECTION */
+.about-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 80px 0;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.about-text h2 {
+    font-size: 2rem;
+    color: #2777BF;
+    margin-bottom: 20px;
+}
+.about-text p {
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+.about-logo img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+   /* PRODUCT SECTION */
+
+.product-section { 
+    padding: 80px 0; 
+    background-color: #fff; 
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.product-text h2 { 
+    font-size: 2.5rem; 
+    color: #333; 
+    margin-bottom: 20px;
+}
+.product-text p { 
+    margin-bottom: 30px; 
+    color: #666; 
+    font-size: 1.2rem;
+}
+.product-mockup img { 
+    width: 100%; 
+    max-width: 450px; 
+}
+
+
+   /* TEAM SECTION */
+.team-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 80px 0;
+}
+.team-section h2 { 
+    color: #2777BF; 
+    margin-bottom: 50px; 
+    font-size: 2rem; 
+    text-align: left;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 40px; 
+}
+.team-card {
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+    text-align: left;
+    background-color: transparent; 
+    padding: 0;
+    border-radius: 0;
+}
+
+.team-avatar {
+    width: 130px;    
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    flex-shrink: 0; 
+}
+
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; 
+}
+
+.team-card h3 { 
+    font-size: 1.4rem; 
+    color: #2777BF; 
+    margin: 0;
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;       
+    margin-top: 8px;
+}
+
+.social-icons a {
+    color: #ffffff;  
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover { 
+    color: #2777BF; 
+}
+
+
+   /* RESPONSIVIDADE  */
+   
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    .team-card {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center; 
+    }
+}
+
+
+   /* CONTACT SECTION */
+   
+.contact-section { 
+    padding: 80px 0; 
+    background-color: #fff; 
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.contact-info h2 { 
+    color: #2777BF; 
+    margin-bottom: 20px; 
+    font-size: 2rem; 
+}
+.contact-info p { 
+    color: #555; 
+}
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+.btn-submit {
+    background-color: #2777BF;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    float: right;
+}
+
+
+   /* FOOTER */
+
+.main-footer { 
+    background-color: #000; 
+    color: #fff; 
+    padding: 40px 0 20px 0; 
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    padding-bottom: 20px;
+}
+.footer-logo { 
+    display: flex; 
+    align-items: center; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+}
+.footer-logo img { 
+    width: 40px; 
+    margin-right: 10px; 
+}
+.footer-socials a { 
+    color: #FFFFFF; 
+    margin-left: 20px; 
+    font-size: 1.3rem; 
+}
+.footer-bottom { 
+    text-align: center; 
+    padding-top: 20px; 
+    font-size: 0.8rem; 
+    color: #666; 
+}
+
+
+   /* MEDIA QUERIES (RESPONSIVIDADE) */
+  
+@media (max-width: 768px) {
+    .about-grid, 
+    .product-grid, 
+    .contact-grid { 
+        grid-template-columns: 1fr; 
+        text-align: center; 
+    }
+    .btn-submit { 
+        float: none; 
+        width: 100%; 
+    }
+    .footer-content { 
+        flex-direction: column; 
+        gap: 20px; 
+    }
+    .footer-socials { 
+        margin-top: 10px; 
+    }
+    .navbar-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+}
